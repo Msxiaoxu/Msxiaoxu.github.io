@@ -14,7 +14,7 @@
 <meta property="og:description" content="从「逻辑规则」到「生成创造」——这篇文章用程序员视角，带你从零看懂 AI 是怎么一步步进化的。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2026-03-10T05:39:19.000Z">
-<meta property="article:modified_time" content="2026-03-10T09:10:51.680Z">
+<meta property="article:modified_time" content="2026-03-11T00:42:10.075Z">
 <meta property="article:author" content="小许">
 <meta property="article:tag" content="ai">
 <meta name="twitter:card" content="summary">
@@ -202,9 +202,16 @@
   }
   .hero-meta span { display: flex; align-items: center; gap: 8px; }
 
+  /* Keep sticky working in the landscape post container on this page only */
+  article[id="post-ai发展历史"] .article-inner {
+    overflow: visible;
+  }
+
   /* ── TIMELINE NAV ── */
   .toc-bar {
-    position: sticky; top: 3px; z-index: 100;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3px; z-index: 100;
     background: rgba(15,14,13,.96);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(255,255,255,.08);
